@@ -525,6 +525,7 @@
 <section class="hero-section">
   <div class="hero-bg"></div>
   <svg class="hero-line" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g id="hero-art">
     <circle class="acc" cx="1090" cy="78" r="30"/>
     <path class="ink" d="M-20 257q370-7 740-2t740-4v13q-370 5-740 2t-740 4z"/>
     <path fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" d="M-20 258H150c70 0 96-44 82-92s-74-56-98-18 6 86 62 86 60-66 112-66 44 90 112 90h60"/>
@@ -532,7 +533,9 @@
     <path fill="none" stroke="var(--bg)" stroke-width="3.5" d="M560 262V200M684 262V208M764 262V208M884 262V190"/>
     <path class="cut" d="M504 262v-40q11-4 22 0v40z"/><path class="cut" d="M490 208q8-3 16 0v20q-8 3-16 0z"/><path class="cut" d="M524 208q8-3 16 0v20q-8 3-16 0z"/><path class="cut" d="M608 262v-44q13-4 26 0v44z"/><path class="cut" d="M580 176q8-3 16 0v20q-8 3-16 0z"/><path class="cut" d="M612 176q8-3 16 0v20q-8 3-16 0z"/><path class="cut" d="M644 176q8-3 16 0v20q-8 3-16 0z"/><path class="acc2" d="M612 128q8-3 16 0v22q-8 3-16 0z"/><path class="cut" d="M713 262v-36q10-4 20 0v36z"/><path class="acc" d="M812 262v-46q13-4 26 0v46z"/><path class="cut" d="M786 156q8-3 16 0v20q-8 3-16 0z"/><path class="cut" d="M816 156q8-3 16 0v20q-8 3-16 0z"/><path class="cut" d="M846 156q8-3 16 0v20q-8 3-16 0z"/><path class="cut" d="M786 196q8-3 16 0v20q-8 3-16 0z"/><path class="cut" d="M846 196q8-3 16 0v20q-8 3-16 0z"/><path class="cut" d="M816 104q8-3 16 0v22q-8 3-16 0z"/><path class="cut" d="M926 262v-40q11-4 22 0v40z"/><path class="cut" d="M900 206q8-3 16 0v20q-8 3-16 0z"/><path class="cut" d="M954 206q8-3 16 0v20q-8 3-16 0z"/><path class="acc2" d="M928 162q8-3 16 0v20q-8 3-16 0z"/>
     <path class="ink" d="M1180 262v-44q-34-4-34-38t38-36q38 0 38 36t-32 38v44z"/><circle class="cut" cx="1172" cy="172" r="5"/><circle class="cut" cx="1194" cy="188" r="4"/><circle class="cut" cx="1190" cy="162" r="3.5"/>
+    </g>
   </svg>
+  <svg class="hero-line-m" viewBox="440 30 700 250" aria-hidden="true"><use href="#hero-art"/></svg>
   <div class="hero-wrap">
     <div class="hero-left fu">
       <h1>Lån med din bolig<br>som <em>sikkerhed</em></h1>
@@ -961,7 +964,18 @@
   from { opacity:0; transform:scale(0.95) translateY(8px); }
   to   { opacity:1; transform:scale(1)    translateY(0); }
 }
-</style>
+    /* linoleum: resten af siden */
+    .hero-line-m { display: none; position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: auto; color: var(--ink); z-index: 0; }
+    .uc-card:nth-child(6n+6) { --bg: var(--sand); }
+    .cta-sec { background: var(--ink); }
+    .cta-card { border-radius: 6px; box-shadow: 8px 8px 0 var(--brick); }
+    .cta-card h3 { font-family: var(--font-s); font-style: italic; font-weight: 500; font-size: 1.5rem; letter-spacing: -0.01em; }
+    .faq-ic { background: var(--ink); } .faq-ic svg { color: #fff; }
+    .faq-btn { font-family: var(--font-s); font-style: italic; font-weight: 500; font-size: 1.3rem; letter-spacing: -0.01em; color: var(--ink); }
+    .disc-sec { background: var(--sand); border-top: none; }
+    .test-card { border: 2px solid var(--ink); }
+    @media (max-width: 900px) { .hero-line { display: none; } .hero-line-m { display: block; } .hero-wrap { padding-bottom: 46vw; } }
+  </style>
 
 <!-- DISCLOSURE -->
 <div class="disc-sec">
